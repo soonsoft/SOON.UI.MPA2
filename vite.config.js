@@ -4,7 +4,7 @@ import { loadHtmlEntry } from "./config/html-entry";
 
 const viewRootPath = resolve(__dirname, "view");
 const htmlEntry = loadHtmlEntry(viewRootPath);
-console.log(htmlEntry);
+// console.log(htmlEntry);
 
 const config = {
     build: {
