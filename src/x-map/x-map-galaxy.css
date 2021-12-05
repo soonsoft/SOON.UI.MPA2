@@ -1,0 +1,988 @@
+
+/* 标题 */
+.head-system-title {
+    width: auto;
+    font-size: 1.5em;
+}
+.head-system-title-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 地图头部按钮 */
+.menu-button-panel {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu-button {
+    width: 64px;
+    height: 48px;
+    display: inline-block;
+    margin-right: 1px;
+    vertical-align: top;
+    margin-top: 0;
+    color: #fff;
+    opacity: .7;
+    text-align: center;
+}
+
+.menu-button i.fa {
+    font-size: 18px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 2px 0 0 16px;
+}
+
+.menu-button span.menu-button-text {
+    font-size: 12px;
+    position: relative;
+    bottom: 6px;
+    line-height: 16px;
+}
+
+.menu-button:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.menu-button:active,
+.menu-button-active {
+    opacity: 1;
+    background-color: rgba(29, 31, 33, .2);
+    text-decoration: none;
+}
+
+/* 地图基本元素 */
+.map-contains {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+}
+
+.map-background {
+    background-color: rgba(23, 54, 70, .7);
+    border: solid 1px rgb(0, 204, 204);
+}
+
+.map-element {
+    background-color: rgba(0, 204, 204, .6);
+}
+
+
+.map-contains ol,
+.map-contains ul,
+.map-contains li,
+.map-contains dl,
+.map-contains dt,
+.map-contains dd,
+.map-contains form,
+.map-contains fieldset,
+.map-contains pr,
+.map-contains pc {
+    margin: 0;
+    padding: 0;
+}
+
+/* 清除浮动，在浮动元素的父级容器上使用 */
+.clear {
+    zoom: 1;
+}
+.clear:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* 默认超链接 */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    background-color: transparent;
+}
+
+/* 地图边栏 */
+.map-contains .ui-sidebar-panel {
+    background-color: rgba(135, 196, 228, .9);
+}
+
+/* 地图filter-button */
+.map-contains .filter-tools-panel {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* 地图工具栏 */
+.map-tool-panel {
+    border-radius: 16px 0 16px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: 10001;
+    display: none;
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(150%);
+    overflow: hidden;
+}
+.map-contains .toolbar {
+    width: 100%;
+    height:48px;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.map-contains .toolbar .tools {
+    margin-left: 10px;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+}
+.map-contains .toolbar .tool-item {
+    float: left;
+    list-style: none;
+    height: 100%;
+    line-height: 40px;
+    margin-right: 10px;
+}
+.map-contains .tool-item .map-button {
+    margin-top: 6px;
+    text-align: center;
+}
+
+.map-contains .tool-item .map-button .fa,
+.map-contains .tool-item .map-button .far,
+.map-contains .tool-item .map-button .fas {
+    font-size: 16px;
+    line-height: 36px;
+}
+
+/* 通用遮罩层 */
+.mask-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    display: none;
+}
+/* 通用的关闭按钮 */
+.closable-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    text-decoration: none !important;
+    font: 18px/16px Tahoma, Verdana, sans-serif;
+    width: 14px;
+    height: 14px;
+    line-height: 12px;
+    color: #888888;
+    cursor: pointer;
+}
+.closable-button:hover {
+    text-decoration: none;
+}
+/* 可拖动的元素 */
+.draggable-handle {
+    cursor: move;
+}
+
+/* 操作按钮，会改变后台数据的按钮，实心的 */
+.button {
+    min-width: 80px;
+    outline: none;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 0.813em;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+.button:active {
+    background-color: rgba(20, 76, 105, .6) !important;
+    color: #fff !important;
+}
+.button:disabled {
+    opacity: .5;
+}
+
+.map-button {
+    width: 36px;
+    height: 36px;
+    vertical-align: top;
+    display: inline-block;
+    opacity: .7;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.map-toggle {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px 2px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.map-button:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.map-button:active,
+.map-button-active {
+    opacity: 1;
+    color: #fff;
+    background-color: rgba(0, 204, 204, 1);
+}
+
+/* 搜索框 */
+.map-search {
+    display: flex;
+    flex-direction: row;
+    width: 186px;
+    height: 36px;
+    margin-top: 6px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 204, 204, 0.6);
+    background-color: rgba(255, 255, 255, .8);
+}
+.map-search:hover {
+    border: solid 2px rgba(0, 204, 204, 1);
+}
+.map-search > .map-search-text {
+    height: 100%;
+    width: 150px;
+    border: none;
+    flex: auto;
+    line-height: 32px;
+    font-size: 18px;
+    padding-left: 20px;
+    color: #0182C6;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    outline: none 0;
+ }
+.map-search > .map-search-text::placeholder {
+    color: #0182C6;
+}
+.map-search > .map-button {
+    width: 32px;
+    height: 32px;
+    margin: 0 !important;
+}
+.map-search .map-toggle {
+    margin: 0;
+}
+
+/* 图层列表样式 */
+.layer-list {
+    min-height: 400px;
+}
+.layer-content {
+    position: absolute;
+    width: 100%;
+    top: 16px;
+    bottom: 16px;
+    overflow: auto;
+    background-color: transparent;
+    color: #fff;
+}
+.ui-selection-tree-dt .ui-selection-tree-checkbox {
+    margin-right: 5px;
+}
+.ui-selection-tree-dt:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+/* 地图菜单列表 */
+.map-contains .map-menu-list {
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    overflow: auto;
+}
+.map-menu-item {
+    list-style: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.map-menu-item:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+.map-menu-item:active {
+    background-color: rgba(20, 76, 105, .6);
+}
+.map-menu-item > .map-menu-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 4px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+}
+.map-menu-item > .map-menu-text {
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+/* 地图轨迹 */
+.map-track-ctrl {
+    width: 100%;
+    text-align: center;
+}
+.map-track-button {
+    display: inline-block;
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    margin-right: 8px;
+    line-height: 32px;
+    font-size: 18px;
+    color: #fff;
+    opacity: .6;
+}
+.map-track-button2 {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 24px;
+    height: 24px;
+    margin-top: 12px;
+    margin-right: 0;
+    line-height: 24px;
+    color: #fff;
+    opacity: .6;
+}
+.map-track-button:hover,
+.map-track-button2:hover {
+    opacity: 1;
+}
+
+/* 亮度调节 */
+.map-light-ctrl {
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.map-light-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 12px;
+    margin-left: 8px;
+    margin-right: 16px;
+}
+.map-light-adjust {
+    display: inline-block;
+    vertical-align: top;
+    width:136px;
+    margin-top: 12px;
+}
+.map-light-value {
+    display: inline-block;
+    vertical-align: top;
+    width:60px;
+    height: 16px;
+    line-height: 16px;
+    margin-top:12px;
+}
+.ui-slidebar-track {
+    background-color: rgba(255, 255, 255, .3);
+}
+.ui-slidebar-thumb {
+    background-color: #fff !important;
+}
+.ui-slidebar-value {
+    background-color: rgba(255, 255, 255, .6) !important;
+}
+
+/**
+    地图对话框 MapDialog
+ */
+.ui-dialog-box {
+    background-color: rgba(23, 54, 70, .3);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(150%);
+}
+.style-dialog-button {
+    position: absolute;
+    display: block;
+    text-decoration: none !important;
+    font: 18px/20px Tahoma,Verdana,sans-serif;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 0;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+.dialog-tab-button {
+    margin-right: 10px;
+    margin-top: 0;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    vertical-align: top;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    opacity: .6;
+    color: #fff;
+    cursor: pointer;
+}
+.dialog-tab-button:hover {
+    text-decoration: none !important;
+    opacity: 1;
+}
+.dialog-tab-button-pointer {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    display: none;
+    border-radius: 2px;
+    background-color: rgb(0, 204, 204);
+}
+.current-dialog-tab {
+    color: rgb(0, 204, 204);
+    opacity: 1;
+}
+.current-dialog-tab .dialog-tab-button-pointer {
+    display: block;
+}
+.ui-dialog-box .ui-tab-body {
+    /* background-color: rgba(255, 255, 255, .1); */
+    line-height: 40px;
+}
+
+/**
+    地图图列
+*/
+.map-legend {
+    width: 80%;
+    min-width: 480px;
+    max-width: 1100px;
+    height: auto;
+    min-height: 40px;
+    max-height: 120px;
+    overflow: visible;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .7);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.map-legend-button {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: 50%;
+    margin-left: -8px;
+    height: 16px;
+    line-height: 16px;
+    width: 48px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: rgba(255, 255, 255, .7);
+    cursor: pointer;
+}
+.map-legend-button:active {
+    background-color: rgba(255, 255, 255, .4);
+}
+.map-legend-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.map-legend-item {
+    width: auto;
+    flex: 0 0 auto;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+.map-legend-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 4px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 32px;
+}
+.map-legend-text {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* 属性列表样式 */
+.property-panel {
+    padding: 0 17px 0 16px;
+    overflow: auto;
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+}
+.property-table {
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+    border: none 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.property-table th {
+    width: 20%;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(255, 255, 255, .4);
+    border: none 0;
+    text-align: right;
+    font-weight: normal;
+}
+.property-table td {
+    width: 30%;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(255, 255, 255, .25);
+    border: none 0;
+}
+.property-table tr:nth-child(odd) th {
+    background-color: rgba(255, 255, 255, .3);
+}
+.property-table tr:nth-child(odd) td {
+    background-color: rgba(255, 255, 255, .15);
+}
+.property-table td > p {
+    line-height: 1.5em;
+}
+/* 标签中的属性列表样式 */
+.ui-tab-body .property-table th {
+    background-color: rgba(0, 204, 204, .2);
+}
+.ui-tab-body .property-table td {
+    background-color: rgba(0, 204, 204, .05);
+}
+.ui-tab-body .property-table tr:nth-child(odd) th {
+    background-color: rgba(0, 204, 204, .3);
+}
+.ui-tab-body .property-table tr:nth-child(odd) td {
+    background-color: rgba(0, 204, 204, .1);
+}
+    /* 表格样式 */
+.ui-grid-view {
+    border: 0 none transparent;
+    color: #fff;
+}
+.ui-table-head,
+.ui-table-body {
+    color: #fff;
+}
+.ui-table-head-cell {
+    border-bottom: solid 1px rgba(255, 255, 255, .6);
+    border-right: 0 none;
+}
+.ui-table-body-cell {
+    border-bottom: 0 none;
+    border-right: 0 none;
+}
+.ui-table-body .table-body-row-hover:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+.ui-table-body .table-body-cell-hover:hover {
+    background-color: rgba(255, 255, 255, .3);
+    color: #fff;
+}
+.ui-grid-foot {
+    background-color: transparent;
+}
+.ui-grid-body .data-prompt .font-highlight {
+    color: #fff !important;
+}
+/* 标签中的表格样式 */
+.ui-tab-body .ui-table-head {
+    color: rgb(0, 204, 204);
+}
+.ui-tab-body .ui-table-body{
+    color: #333;
+}
+.ui-tab-body .ui-table-head-cell {
+    border-bottom: solid 1px rgba(0, 204, 204, .6);
+}
+.ui-tab-body .ui-table-body-cell {
+    border-bottom: 0 none;
+}
+
+.white-panel ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 204, 204, .4);
+}
+
+/* 图片浏览器样式 */
+.image-preview {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 1px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    border: solid 1px rgba(0, 204, 204, .4);
+}
+.image-view-panel {
+    width: 100%;
+    height: 257px;
+}
+.image-preview-chooser {
+    background-color: rgba(0, 204, 204, .2);
+}
+
+/* 视频容器样式 */
+.video-panel {
+    background-color: #000;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+    color: #fff;
+    overflow: hidden;
+}
+.video-plugin-download,
+.view-plugin-text {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 16px;
+}
+
+.ui-fixed-top {
+    z-index: 10000;
+}
+
+/* 列表样式 */
+.ui-list-view-item-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ui-list-view-item-text {
+    opacity: .7;
+    line-height: 40px;
+    margin: 0 10px 0 0;
+}
+
+.ui-list-view-selection .ui-list-view-item-text {
+    opacity: 1;
+}
+
+.ui-operate-detail-head {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+.ui-operate-detail-body {
+    width: 100%;
+    overflow: auto;
+}
+
+.ui-operate-detail-back {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.ui-operate-detail-back:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.ui-operate-detail-back .fa {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.ui-operate-detail-text {
+    line-height: 40px;
+}
+
+.ui-operate-detail-body .ui-operate-detail-ul {
+    padding: 0 10px;
+}
+
+.ui-operate-detail-body .ui-operate-detail-li {
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.ui-operate-detail-body .ui-operate-detail-label {
+    line-height: 1em;
+    opacity: .6;
+}
+
+.ui-operate-detail-body .ui-operate-detail-info {
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.ui-operate-detail-body .ui-operate-detail-list-item {
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, .15);
+    margin-top: 10px;
+    padding: 4px;
+}
+
+/* 消息列表 */
+.ui-message-list {
+    position: relative;
+    overflow: auto;
+}
+.ui-message-container {
+    width: 100%;
+    height: auto;
+}
+.ui-message-list-item {
+    width: 90%;
+    height: auto;
+    min-height: 24px;
+    line-height: 24px;
+    margin: 10px auto !important;
+    padding: 0 !important;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+    .ui-message-list-item:active {
+        opacity: .5;
+    }
+.ui-message-list-item-border {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+.ui-message-list-item-text {
+    margin-left: 10px;
+}
+.alarm-message-level1 {
+    background-color: #8C346B;
+    color: #F6C0D5;
+}
+.alarm-message-level1 > .ui-message-list-item-border {
+    background-color: #E64E89;
+}
+.alarm-message-level2 {
+    background-color: #6D5B34;
+    color: #FFECB6;
+}
+.alarm-message-level2 > .ui-message-list-item-border {
+    background-color: #FFC828;
+}
+.alarm-message-level3 {
+    background-color: #4D0A7E;
+    color: #E5AAF3;
+}
+.alarm-message-level3 > .ui-message-list-item-border {
+    background-color: #B306DC;
+}
+.alarm-message-level4 {
+    background-color: #0B657F;
+    color: #AFF5F3;
+}
+.alarm-message-level4 > .ui-message-list-item-border {
+    background-color: #14E2DD;
+}
+
+/* 布局系统样式 */
+.layer-list {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: auto;
+}
+
+.layer-group-title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.layer-group-text {
+    margin-left: 16px;
+}
+
+.layer-button {
+    display: inline-block;
+    background-color: transparent;
+    width: 36px;
+    height: 60px;
+    overflow: hidden;
+    margin-left: 16px;
+    color: #fff;
+    opacity: .7;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.layer-button:hover {
+    opacity: 1;
+}
+
+.layer-button .map-element {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.layer-button-selection {
+    opacity: 1;
+}
+
+.layer-button-selection .map-element {
+    background-color: rgba(0, 204, 204, 1);
+}
+
+.layer-button .fa,
+.layer-button .far,
+.layer-button .fas {
+    color: #fff;
+    font-size: 16px;
+}
+
+.layer-button .layer-button-text {
+    display: block;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+/*滚动条样式*/
+/*IE*/
+html {
+    /*滑块*/
+    scrollbar-face-color: rgba(255, 255, 255, .4);;
+    -ms-scrollbar-face-color: rgba(255, 255, 255, .4);;
+    /*高亮色*/
+    scrollbar-highlight-color: transparent;
+    -ms-scrollbar-highlight-color: transparent;
+    /*3D高亮色 win8下无效*/
+    scrollbar-3dlight-color: transparent;
+    -ms-scrollbar-3dlight-color: transparent;
+    /*阴影 win8下无效*/
+    scrollbar-darkshadow-color: transparent;
+    -ms-scrollbar-darkshadow-color: transparent;
+    /*阴影 win8下无效*/
+    scrollbar-shadow-color: transparent;
+    -ms-scrollbar-shadow-color: transparent;
+    /*箭头*/
+    scrollbar-arrow-color: rgba(255, 255, 255, .4);
+    -ms-scrollbar-arrow-color: rgba(255, 255, 255, .4);
+    /*滚动条*/
+    scrollbar-track-color: transparent;
+    -ms-scrollbar-track-color: transparent;
+    /*基础*/
+    scrollbar-base-color: transparent;
+    -ms-scrollbar-base-color: transparent;
+}
+/*Webkit chrome opera safari*/
+/* https://webkit.org/blog/363/styling-scrollbars/ */
+/* 滚动条宽度 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  /* 滚动条轨道颜色 */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  /* 滚动条滑块的颜色 */
+  ::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 0 none transparent;
+    background-color: rgba(255, 255, 255, .4);
+  }
+  /* 横向纵向同时出现是角的样式 */
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }

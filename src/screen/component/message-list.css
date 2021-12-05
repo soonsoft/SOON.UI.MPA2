@@ -1,0 +1,60 @@
+/* 消息列表 */
+.ui-message-list {
+    position: relative;
+    overflow: auto;
+}
+.ui-message-container {
+    width: 100%;
+    height: auto;
+}
+.ui-message-list-item {
+    width: 90%;
+    height: auto;
+    min-height: 24px;
+    line-height: 24px;
+    margin: 10px auto !important;
+    padding: 0 !important;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+    .ui-message-list-item:active {
+        opacity: .5;
+    }
+.ui-message-list-item-border {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+.ui-message-list-item-text {
+    margin-left: 10px;
+}
+.alarm-message-level1 {
+    background-color: #8C346B;
+    color: #F6C0D5;
+}
+.alarm-message-level1 > .ui-message-list-item-border {
+    background-color: #E64E89;
+}
+.alarm-message-level2 {
+    background-color: #6D5B34;
+    color: #FFECB6;
+}
+.alarm-message-level2 > .ui-message-list-item-border {
+    background-color: #FFC828;
+}
+.alarm-message-level3 {
+    background-color: #4D0A7E;
+    color: #E5AAF3;
+}
+.alarm-message-level3 > .ui-message-list-item-border {
+    background-color: #B306DC;
+}
+.alarm-message-level4 {
+    background-color: #0B657F;
+    color: #AFF5F3;
+}
+.alarm-message-level4 > .ui-message-list-item-border {
+    background-color: #14E2DD;
+}

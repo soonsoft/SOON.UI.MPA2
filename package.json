@@ -1,0 +1,13 @@
+{
+  "name": "soon.ui.mpa",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "echarts": "^5.2.2",
+    "vite": "^2.6.4"
+  }
+}

@@ -1,0 +1,16 @@
+/*
+#body {
+    background-image: url(../../content/image/cobalt.jpg);
+}
+*/
+
+/*
+.ui-tile .tile-inner {
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(150%);
+}
+*/
+
+.tile-large .weather-item {
+    background-color: rgba(177, 177, 177, 0.5);
+}

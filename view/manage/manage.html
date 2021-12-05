@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <link type="text/css" href="/content/css/theme/light/site-light.css" rel="stylesheet" />
+    <link type="text/css" href="/content/css/theme/light/metro-light.all.css" rel="stylesheet" />
+    <link type="text/css" href="/content/css/theme/viewpage/viewpage.all.css" rel="stylesheet" />
+    <link type="text/css" href="/content/css/theme/color/ui.metro.Default.css" rel="stylesheet" id="highlight" />
+
+    <link type="text/css" href="/content/icon/font-awesome/font-awesome.css" rel="stylesheet" />
+    <link type="text/css" href="/content/css/loading-circle.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="head" class="head-color clear">
+        <h1 class="head-system-title">
+            <a class="ui-home-button" href="javascript:void(0)"></a><span class="head-system-title-text"></span>
+        </h1>
+        <ul id="headerCtrls" class="head-ctrl-buttons">
+            <li class="head-ctrl-buttons-item">
+                <div id="user" class="user-color title-color" title="username">
+                    <img src="/content/icon/protrait.png" class="cover" alt="用户头像" />
+                </div>
+            </li>
+        </ul>
+        <div id="loadingElement" class="c_flyingDots c_loadingDots" style="bottom:0;left:0;position:absolute;display:none;width:100%;">
+            <div class="c_loadingTracks">
+                <div class="c_loadingTracks c_loadingTrack1">
+                    <div class="c_loadingDot"></div>
+                </div>
+                <div class="c_loadingTracks c_loadingTrack2">
+                    <div class="c_loadingDot"></div>
+                </div>
+                <div class="c_loadingTracks c_loadingTrack3">
+                    <div class="c_loadingDot"></div>
+                </div>
+                <div class="c_loadingTracks c_loadingTrack4">
+                    <div class="c_loadingDot"></div>
+                </div>
+                <div class="c_loadingTracks c_loadingTrack5">
+                    <div class="c_loadingDot"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="body" style="visibility:hidden">
+        <div class="ui-menu-panel"></div>
+        <div class="content-container"></div>
+    </section>
+    
+    <div class="page-progress large circles" style="display:block;">
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+    </div>
+
+    <script type="module" src="./manage.js"></script>
+</body>
+</html>

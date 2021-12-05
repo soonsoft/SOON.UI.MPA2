@@ -1,0 +1,113 @@
+#loginWindow {
+    position: absolute;
+    background-color: #9eacb3;
+    border: 1px solid #D0D9DD;
+}
+
+#loginWindow .bgImage {
+    position: absolute;
+}
+
+#loginWindow #dynamicBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#loginWindow .image-name {
+    position: absolute;
+    font-size: 1.25em;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 2%, transparent);
+}
+
+#loginWindow .logo {
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    line-height: 46px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.login-panel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.panel-background {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    background-color: #000000;
+    opacity: 0;
+}
+
+.panel-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.form-content {
+    position: absolute;
+    bottom: 65px;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.form-content label {
+    line-height: 30px;
+}
+
+.button-panel {
+    width: 100%;
+    margin-top: 30px;
+}
+
+input[type='text'], 
+input[type='password'] {
+    width: 198px;
+    border: none 0px;
+    height: 26px;
+    line-height: 26px;
+    color: #333333;
+    background-color: #BFBFBF;
+    opacity: .6;
+}
+
+input[type='text']:hover,
+input[type='text']:focus,
+input[type='password']:hover,
+input[type='password']:focus {
+    background-color: #E6E5E5;
+    color: #000000;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.button {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+}
