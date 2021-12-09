@@ -1,5 +1,6 @@
 import ui from "../../soonui";
 import { defineScreenComponent } from "../util/define";
+import "./message-list.css";
 
 const $ = ui.$;
 
