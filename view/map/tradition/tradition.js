@@ -370,6 +370,10 @@ function createPictureDialog() {
     addClass(chooser, "image-preview-chooser");
     append(imagePreview, viewPanel, chooser);
 
+    function getPicture(name) {
+        return new URL(`../../../resource/picture/${name}.jpg`, import.meta.url).href;
+    }
+
     let dialog = null;
 
     const okButton = createButton("确 定", e => dialog.done());
@@ -383,16 +387,18 @@ function createPictureDialog() {
         buttons: [okButton, noButton]
     }, imagePreview);
     dialog.showing(e => {
-        dialog.initImageView(imagePreview, {
-            chooserSize: 44,
-            images: [
-                "/content/image/picture/1.jpg",
-                "/content/image/picture/5.jpg",
-                "/content/image/picture/12.jpg",
-                "/content/image/picture/20.jpg",
-                "/content/image/picture/27.jpg"
-            ]
-        });
+        if(!dialog.imageView) {
+            dialog.initImageView(imagePreview, {
+                chooserSize: 44,
+                images: [
+                    getPicture("1"), 
+                    getPicture("5"), 
+                    getPicture("12"), 
+                    getPicture("20"), 
+                    getPicture("27")
+                ]
+            });
+        }
     });
     dialog.hiding(e => removeClass(document.getElementById("pictureBox"), ui.page.mapButtonActive));
 
